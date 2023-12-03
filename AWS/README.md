@@ -1,3 +1,3 @@
 # Steps to Deploy Website on AWS
 
-<img src="../Images/Amazon_Web_Services-Logo.wine.png" alt="AWS Logo" width="200" />
+<img src="../Images/AWS-Logo-PNG-Images.png" alt="AWS Logo" width="200" />
