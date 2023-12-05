@@ -62,3 +62,13 @@ On your local machine, install SSH if not already installed:
 
 ```bash
 $ sudo apt install ssh
+```
+
+## Step 6: Check the SSH config file
+
+Open the SSH config file for editing:
+
+```bash
+$ sudo vim /etc/ssh/ssh_config
+
+```
