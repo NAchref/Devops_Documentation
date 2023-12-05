@@ -90,3 +90,22 @@ Restart the SSH service:
 ```bash
 $ sudo systemctl restart ssh
 ```
+
+## Step 8: Connect to EC2 Instance
+
+Ensure you are in the directory where you've downloaded the .pem file and connect to your EC2 instance:
+
+```bash
+$ ssh -i file.pem ec2-user@<Public IPv4 address>
+```
+
+## Step 9: Switch to root, install updates, and install Apache
+
+Once connected to the EC2 instance, run the following commands:
+
+```bash
+$ sudo su
+$ yum update -y
+$ yum install httpd -y
+$ service httpd start
+```
