@@ -7,13 +7,8 @@
 - [Prerequisites](#prerequisites)
 - [Step 1: Set Up AWS Account](#step-1-set-up-aws-account)
 - [Step 2: Create an S3 Bucket](#step-2-create-an-s3-bucket)
-- [Step 3: Configure Bucket for Static Website Hosting](#step-3-configure-bucket-for-static-website-hosting)
-- [Step 4: Upload Website Files to S3](#step-4-upload-website-files-to-s3)
-- [Step 5: Set Up Permissions](#step-5-set-up-permissions)
-- [Step 6: Configure Domain with Route 53](#step-6-configure-domain-with-route-53)
-- [Step 7: Set Up CloudFront for CDN](#step-7-set-up-cloudfront-for-cdn)
-- [Conclusion](#conclusion)
-- [Contact](#contact)
+- [Step 3: Create Key Pair](#step-3-create-key-pair)
+
 
 
 <img src="../Images/AWS-Logo-PNG-Images.png" alt="AWS Logo" width="200" />
@@ -40,3 +35,22 @@ This guide provides detailed steps to deploy a static website on AWS using Amazo
 2. Click "Create bucket."
 3. Enter a unique bucket name and select a region.
 4. Leave other settings as default and click "Create bucket."
+
+## Step 3: Create Key Pair
+
+1. Open the EC2 console at [https://console.aws.amazon.com/ec2](https://console.aws.amazon.com/ec2).
+2. Click "Key Pairs" under "Network & Security."
+3. Click "Create key pair."
+4. Name your key pair and choose the ".pem" format.
+5. Download the ".pem"
+
+
+## Step 4: Create EC2 Instance
+
+1. In the EC2 console, click "Instances" and then "Launch Instance."
+2. Choose an Amazon Machine Image (AMI) (e.g., Amazon Linux 2 AMI).
+3. Select an instance type (e.g., t2.micro for free tier eligibility).
+4. Configure the instance details and add storage if needed.
+5. Add tags if necessary.
+6. Configure the security group to allow SSH (port 22) and HTTP (port 80) traffic.
+7. Review and launch the instance using the key pair created in Step 3.
