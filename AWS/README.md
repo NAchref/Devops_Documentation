@@ -72,3 +72,21 @@ Open the SSH config file for editing:
 $ sudo vim /etc/ssh/ssh_config
 
 ```
+
+Make sure the following lines are uncommented in /etc/ssh/ssh_config.d file:
+
+```bash
+PasswordAuthentication yes
+ChallengeResponseAuthentication no
+PubkeyAuthentication yes
+GSSAPIAuthentication yes
+
+```
+
+## Step 7: Restart SSH service
+
+Restart the SSH service:
+
+```bash
+$ sudo systemctl restart ssh
+```
