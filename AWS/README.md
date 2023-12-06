@@ -8,9 +8,9 @@
 - [Step 1: Set Up AWS Account](#step-1-set-up-aws-account)
 - [Step 2: Create an S3 Bucket](#step-2-create-an-s3-bucket)
 - [Step 3: Create Key Pair](#step-3-create-key-pair)
-- [Step 4: Create EC2 Instance](#step-3-create-ec2-instance)
-- [Step 5: Install SSH locally](#step-3-install-ssh-locally)
-- [Step 6: Check the SSH config file](#step-3-check-the-ssh-config-file)
+- [Step 4: Create EC2 Instance](#step-4-create-ec2-instance)
+- [Step 5: Install SSH locally](#step-5-install-ssh-locally)
+- [Step 6: Check the SSH config file](#step-6-check-the-ssh-config-file)
 
 
 
