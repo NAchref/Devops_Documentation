@@ -1,5 +1,5 @@
 # Docker Commands
 
-<img src="../Images/docker_-01.jpg" alt="docker" width="300" />
+<img src="../Images/docker.png" alt="docker" width="250" />
 
 ## how to search a docker image in hub.docker.com
