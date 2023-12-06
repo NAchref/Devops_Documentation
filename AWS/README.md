@@ -109,3 +109,34 @@ $ yum update -y
 $ yum install httpd -y
 $ service httpd start
 ```
+
+## Step 10: Navigate to the web server root directory
+
+```bash
+$ cd /var/www/html
+```
+
+## Step 11: Download the .zip file using the S3 bucket URL
+
+Make sure the S3 bucket is set to public to be able to download it on the EC2 instance:
+
+```bash
+$ wget <S3 bucket URL>
+```
+
+## Step 12: Unzip the file
+
+```bash
+$ unzip <file.zip>
+```
+
+
+## Step 13: Move project files into the current directory
+
+```bash
+$ mv directory/* .
+```
+
+
+
+
