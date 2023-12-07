@@ -36,3 +36,29 @@ docker - run your container in back ground (detached)
 docker run -d --name <container_Name> <image_name>:<image_version/tag>
 
 ```
+
+## Expose your application to host server
+
+```bash
+docker run -d --name <container_Name> -p <host_port>:<container_port> <image_name>:<Image_version/tag>
+
+docker run -d --name httpd_container -p 8080:80 httpd:latest
+```
+
+## Show all running containers
+
+```bash
+docker ps
+```
+
+## Show all docker container (running, stpooed, terminated, etc...)
+
+```bash
+docker ps -a
+```
+
+## Get inside a container
+
+```bash
+docker exec -it <container_Name> bash
+```
