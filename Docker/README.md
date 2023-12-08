@@ -62,3 +62,28 @@ docker ps -a
 ```bash
 docker exec -it <container_Name> bash
 ```
+
+## Stop a container
+
+```bash
+docker stop <container_id>
+```
+
+## Start a container which is stopped
+
+```bash
+docker start <container_id>
+```
+
+## Remove a container
+
+```bash
+docker rm <container_id>
+```
+
+## Remove docker image
+
+```bash
+docker rmi <image_id>
+```
+
