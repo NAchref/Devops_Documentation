@@ -108,5 +108,94 @@ Merge into the current branch.
 git merge <branch>
 ```
 
+# Remote Repositories
+
+Create a new connection to a remote repo. After adding a remote, you can use as a shortcut for in other commands.
+
+```bash
+git remote add <remote> <url>
+```
+
+Fetches a specific , from the repo. Leave off to fetch all remote refs.
+
+```bash
+git fetch <remote> <branch>
+```
+
+Fetch the specified remote’s copy of current branch and immediately merge it into the local copy.
+
+```bash
+git pull <remote>
+```
+
+Push the branch to , along with necessary commits and objects. Creates named branch in the remote repo if it doesn’t exist.
+
+```bash
+git push <remote> <branch>
+```
+
+Git Config Define the author name to be used for all commits by the current user.
+
+```bash
+git config --global user.name "<name>"
+```
+
+Define the author email to be used for all commits by the current user.
+
+```bash
+git config --global user.email "<email>"
+```
+
+# Git Diff
+
+Show difference between working directory and last commit.
+
+```bash
+git diff HEAD
+```
+
+Show difference between staged changes and last commit
+
+```bash
+git diff --staged
+```
+
+
+# Git Rebase
+
+Interactively rebase current branch onto . Launches editor to enter commands for how each commit will be transferred to the new base.
+
+```bash
+git rebase -i <base>
+```
+
+# Git Pull
+
+Fetch the remote’s copy of current branch and rebases it into the local copy. Uses git rebase instead of merge to integrate the branches.
+
+```bash
+git pull --rebase <remote>
+```
+
+# Git Push
+
+Forces the git push even if it results in a non-fast-forward merge. Do not use the --force flag unless you’re absolutely sure you know what you’re doing.
+
+```bash
+git push --force <remote>
+```
+
+Push all of your local branches to the specified remote.
+
+```bash
+git push --all <remote>
+```
+
+Tags aren’t automatically pushed when you push a branch or use the --all flag. The --tags flag sends all of your local tags to the remote repo.
+
+```bash
+git push --tags <remote>
+```
+
 
 
