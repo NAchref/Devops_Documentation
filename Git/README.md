@@ -197,5 +197,55 @@ Tags aren’t automatically pushed when you push a branch or use the --all flag.
 git push --tags <remote>
 ```
 
+# Git Log
+
+Limit number of commits by . E.g. ”git log -5” will limit to 5 commits.
+
+```bash
+git log -<number>
+```
+
+Condense each commit to a single line.
+
+```bash
+git log --online
+```
+
+Display the full diff of each commit.
+
+```bash
+git log -p
+```
+
+Include which files were altered and the relative number of lines that were added or deleted from each of them.
+
+```bash
+git log --stat
+```
+
+Search for commits by a particular author.
+
+```bash
+git log --author=<name>
+```
+
+Search for commits with a commit message that matches.
+
+```bash
+git log --grep=<string>
+```
+
+Only display commits that have the specified file.
+
+```bash
+git log -- <file>
+```
+
+--graph flag draws a text based graph of commits on left side of commit msgs. --decorate adds names of branches or tags of commits shown.
+
+```bash
+git log --graph --decorate
+```
+
 
 
