@@ -1,0 +1,10 @@
+# Vagrantfile with Puppet provisioner
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/focal64"
+
+  config.vm.provision "puppet" do |puppet|
+    puppet.manifests_path = "manifests"
+    puppet.manifest_file  = "default.pp"
+  end
+end
