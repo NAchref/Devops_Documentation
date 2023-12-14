@@ -33,3 +33,15 @@ VPC is Amazon Virtual Private Cloud (Amazon VPC) enables you to launch AWS resou
 IAC is Infrastructure as Code which is managing and provisioning of infrastructure through code instead of through manual processes.
 ```
 
+## Question 5:
+### What is Cloud Formation?
+```
+AWS CloudFormation is a service that gives developers and businesses an easy way to create a collection of related AWS and third-party resources, and provision and manage them in an orderly and predictable fashion.
+```
+
+## Question 6: (Kubernetes)
+### What is Kubernetes and how does it work?
+```
+Kubernetes is an open-source platform that automates the deployment, scaling, and management of containerized applications. It works by creating a cluster of worker nodes that can run containerized applications, and managing those nodes and applications through a central control plane.
+
+```
