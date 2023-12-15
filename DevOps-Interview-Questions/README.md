@@ -13,13 +13,13 @@ Both Vagrant and Docker have a vast library of community-contributed "images" or
 
 ## Question 2:
 ### What is SAAS, PAAS & IAAS stand for?
-### What is the difference between them?
-
+```
 SAAS: Software as a Service, also known as cloud application services, SaaS utilizes the internet to deliver applications, which are managed by a third-party vendor, to its users. A majority of SaaS applications run directly through your web browser, which means they do not require any downloads or installations on the client side.
 
 PAAS: Cloud platform services, also known as Platform as a Service, PaaS delivers a framework for developers that they can build upon and use to create customized applications. All servers, storage, and networking can be managed by the enterprise or a third-party provider while the developers can maintain management of the applications.
 
 IAAS: Cloud infrastructure services, known as Infrastructure as a Service, Cloud infrastructure services, known as Infrastructure as a Service
+```
 
 ## Question 3:
 ### What is VPC?
@@ -43,5 +43,26 @@ AWS CloudFormation is a service that gives developers and businesses an easy way
 ### What is Kubernetes and how does it work?
 ```
 Kubernetes is an open-source platform that automates the deployment, scaling, and management of containerized applications. It works by creating a cluster of worker nodes that can run containerized applications, and managing those nodes and applications through a central control plane.
+
+```
+
+## Question 7:
+### Can you explain the difference between a pod and a deployment in Kubernetes?
+```
+A pod is the smallest deployable unit in Kubernetes, consisting of one or more containers that share the same network and storage resources. A deployment is a higher-level abstraction that manages a set of replica pods, ensuring that the desired number of replicas are running and that they are updated and rolled out gracefully.
+
+```
+
+## Question 8:
+### How do you scale a deployment in Kubernetes?
+```
+You can scale a deployment in Kubernetes by updating its replica count using the kubectl scale command or by modifying its YAML configuration file and applying the changes using kubectl apply.
+
+```
+
+## Question 9:
+### How do you monitor and troubleshoot a Kubernetes cluster?
+```
+You can monitor and troubleshoot a Kubernetes cluster using various tools and techniques, including logging and metrics collection, tracing, and debugging. Common tools for monitoring and troubleshooting Kubernetes include Prometheus, Grafana, Jaeger, and kubectl commands like kubectl logs and kubectl exec.
 
 ```
