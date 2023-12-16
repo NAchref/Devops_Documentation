@@ -76,21 +76,20 @@ To deploy a containerized application to Kubernetes, you need to create a Kubern
 
 ## Question 11:
 ### What are the different types of Kubernetes volumes and when would you use each type?
+
 ```
 There are several types of Kubernetes volumes, including hostPath, emptyDir, configMap, secret, persistentVolumeClaim, and more. Each type is designed to support different use cases and storage requirements, such as temporary storage, shared configuration, or persistent data storage.
-
 ```
 
 ## Question 12:
 ### Can you explain the concept of a Kubernetes namespace?
 ```
 A namespace is a way to partition a Kubernetes cluster into multiple virtual clusters. It provides a way to group related objects together and to provide isolation between different parts of your application. You can use namespaces to limit resource usage, provide access control, and simplify management of your Kubernetes cluster.
-
 ```
 
 ## Question 13:
 ### How do you perform a rolling update of a Kubernetes deployment?
+
 ```
 You can perform a rolling update of a Kubernetes deployment by updating the deployment manifest file with the new container image or configuration options and then using kubectl apply to apply the changes. Kubernetes will automatically roll out the update to the pods in the deployment, one at a time, while keeping the application available to users.
-
 ```
