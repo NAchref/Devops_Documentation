@@ -64,14 +64,12 @@ You can scale a deployment in Kubernetes by updating its replica count using the
 ### How do you monitor and troubleshoot a Kubernetes cluster?
 ```
 You can monitor and troubleshoot a Kubernetes cluster using various tools and techniques, including logging and metrics collection, tracing, and debugging. Common tools for monitoring and troubleshooting Kubernetes include Prometheus, Grafana, Jaeger, and kubectl commands like kubectl logs and kubectl exec.
-
 ```
 
 ## Question 10:
 ### How do you deploy a containerized application to Kubernetes?
 ```
 To deploy a containerized application to Kubernetes, you need to create a Kubernetes deployment or a pod YAML configuration file that describes the application's container image, resource requirements, and other settings. You can then apply the configuration using kubectl apply or create commands.
-
 ```
 
 ## Question 11:
@@ -92,4 +90,18 @@ A namespace is a way to partition a Kubernetes cluster into multiple virtual clu
 
 ```
 You can perform a rolling update of a Kubernetes deployment by updating the deployment manifest file with the new container image or configuration options and then using kubectl apply to apply the changes. Kubernetes will automatically roll out the update to the pods in the deployment, one at a time, while keeping the application available to users.
+```
+
+## Question 29:
+### What are some benefits of using IaC for managing infrastructure, compared to traditional approaches?
+
+```
+Some benefits of using IaC for managing infrastructure include faster and more consistent provisioning, greater agility and flexibility, easier collaboration and version control, improved security and compliance, and better cost management.
+```
+
+## Question 34:
+### What are some common challenges and limitations when using IaC, and how can they be addressed?
+
+```
+Common challenges and limitations when using IaC include managing stateful resources, dealing with complex dependencies, handling drift and resource deletion, and addressing security concerns. These challenges can be addressed by using tools and techniques like Terraform modules, Ansible playbooks, configuration drift detection, and security automation.
 ```
