@@ -92,16 +92,38 @@ A namespace is a way to partition a Kubernetes cluster into multiple virtual clu
 You can perform a rolling update of a Kubernetes deployment by updating the deployment manifest file with the new container image or configuration options and then using kubectl apply to apply the changes. Kubernetes will automatically roll out the update to the pods in the deployment, one at a time, while keeping the application available to users.
 ```
 
-## Question 29:
+## Question 14:
 ### What are some benefits of using IaC for managing infrastructure, compared to traditional approaches?
 
 ```
 Some benefits of using IaC for managing infrastructure include faster and more consistent provisioning, greater agility and flexibility, easier collaboration and version control, improved security and compliance, and better cost management.
 ```
 
-## Question 34:
+## Question 15:
 ### What are some common challenges and limitations when using IaC, and how can they be addressed?
 
 ```
 Common challenges and limitations when using IaC include managing stateful resources, dealing with complex dependencies, handling drift and resource deletion, and addressing security concerns. These challenges can be addressed by using tools and techniques like Terraform modules, Ansible playbooks, configuration drift detection, and security automation.
+```
+
+## Question 16:
+### How do you manage secrets and sensitive data in IaC code?
+
+```
+Sensitive data and secrets can be managed in IaC code by using tools like HashiCorp Vault or AWS Secrets Manager to store and manage secrets securely, and by using environment variables or configuration files to pass secrets to the IaC tool at runtime.
+```
+
+## Question 17:
+### What is the difference between Ansible, Puppet, and Chef?
+
+* Ansible: An agentless configuration management tool that uses SSH for communication. It uses YAML for its playbooks and is known for its simplicity and ease of use.
+* Puppet: A configuration management tool that uses a client-server model with a master agent architecture. It uses its own declarative language (Puppet DSL) and is suitable for complex environments.
+* Chef: A configuration management tool that also follows a client-server model but uses a pull mechanism. It uses Ruby-based DSL for writing configurations and is known for its flexibility.
+
+
+## Question 18:
+### What is a Jenkins pipeline, and how do you create one?
+
+```
+A Jenkins pipeline is a suite of plugins that support implementing and integrating continuous delivery pipelines into Jenkins. It allows defining the entire build process, from code checkout to deployment, as code.
 ```
