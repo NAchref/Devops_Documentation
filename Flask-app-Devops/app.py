@@ -1,8 +1,8 @@
-from dotenv import load_dotenv
-from flask import Flask, render_template
-import os
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, render_template, request, redirect, url_for
 import pymysql
+import os
+
+from flask_sqlalchemy import SQLAlchemy
 
 # Load environment variables
 load_dotenv()
@@ -39,3 +39,22 @@ def index():
     tasks = cursor.fetchall()
     return render_template('index.html', tasks=tasks)
 
+@app.route('/add', methods=['POST'])
+def add_task():
+    title = request.form.get('title')
+    description = request.form.get('description')
+    add_task_to_database(title, description)
+    return redirect(url_for('index'))
+
+
+@app.route('/delete/<int:task_id>', methods=['POST'])
+def delete_task(task_id):
+    try:
+        with db_connection.cursor() as cursor:
+            sql = "DELETE FROM tasks WHERE id = %s"
+            cursor.execute(sql, (task_id,))
+            db_connection.commit()
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        db_connection.rollback()
+    return redirect(url_for('index'))
