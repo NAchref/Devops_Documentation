@@ -58,3 +58,32 @@ def delete_task(task_id):
         print(f"An error occurred: {e}")
         db_connection.rollback()
     return redirect(url_for('index'))
+
+
+@app.route('/complete/<int:task_id>', methods=['POST'])
+def complete_task(task_id):
+    try:
+        with db_connection.cursor() as cursor:
+            sql = "UPDATE tasks SET is_complete = TRUE WHERE id = %s"
+            cursor.execute(sql, (task_id,))
+            db_connection.commit()
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        db_connection.rollback()
+    return redirect(url_for('index'))
+
+# Send data to the database 
+def add_task_to_database(title, description):
+    try:
+        with db_connection.cursor() as cursor:
+            # Create a new record
+            sql = "INSERT INTO tasks (title, description) VALUES (%s, %s)"
+            cursor.execute(sql, (title, description))
+
+        db_connection.commit()
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        db_connection.rollback()
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True)
