@@ -12,4 +12,12 @@ db_username=$(terraform output -raw db_username)
 db_password=$(terraform output -raw db_password)
 app_image_name="$aws_id.dkr.ecr.$region.amazonaws.com/$app_img:latest"
 db_image_name="$aws_id.dkr.ecr.$region.amazonaws.com/$db_img:latest"
-cd .. 
+cd ..
+namespace="todo-app"
+monitoring_ns="monitoring"
+app_service_name="todo-app-service"
+alertmanager_service_name="kube-prometheus-stack-alertmanager"
+prometheus_service_name="kube-prometheus-stack-prometheus"
+grafana_service_name="kube-prometheus-stack-grafana"
+# End Variables
+ 
