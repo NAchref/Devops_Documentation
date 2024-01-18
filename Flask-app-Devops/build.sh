@@ -20,4 +20,18 @@ alertmanager_service_name="kube-prometheus-stack-alertmanager"
 prometheus_service_name="kube-prometheus-stack-prometheus"
 grafana_service_name="kube-prometheus-stack-grafana"
 # End Variables
- 
+
+
+# update helm repos
+helm repo update
+
+# create the cluster
+# echo "--------------------Creating EKS--------------------"
+# echo "--------------------Creating ECR--------------------"
+# echo "--------------------Creating EBS--------------------"
+# echo "--------------------Creating RDS--------------------"
+# echo "--------------------Deploying Monitoring--------------------"
+cd terraform && \
+terraform init 
+terraform apply -auto-approve
+cd ..
