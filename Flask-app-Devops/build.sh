@@ -39,3 +39,9 @@ cd ..
 # update kubeconfig
 echo "--------------------Update Kubeconfig--------------------"
 aws eks update-kubeconfig --name $cluster_name --region $region
+
+
+# remove preious docker images
+echo "--------------------Remove Previous build--------------------"
+docker rmi -f $app_image_name || true
+docker rmi -f $db_image_name || true
