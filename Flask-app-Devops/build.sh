@@ -35,3 +35,7 @@ cd terraform && \
 terraform init 
 terraform apply -auto-approve
 cd ..
+
+# update kubeconfig
+echo "--------------------Update Kubeconfig--------------------"
+aws eks update-kubeconfig --name $cluster_name --region $region
