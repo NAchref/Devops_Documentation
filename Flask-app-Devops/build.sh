@@ -45,3 +45,9 @@ aws eks update-kubeconfig --name $cluster_name --region $region
 echo "--------------------Remove Previous build--------------------"
 docker rmi -f $app_image_name || true
 docker rmi -f $db_image_name || true
+
+
+# build new docker image with new tag
+echo "--------------------Build new Image--------------------"
+docker build -t $app_image_name todo-app/
+docker build -f k8s/Dockerfile.mysql -t $db_image_name k8s
