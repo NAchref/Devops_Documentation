@@ -81,3 +81,17 @@ kubectl apply -n $namespace -f k8s/
 # Wait for application to be deployed
 echo "--------------------Wait for all pods to be running--------------------"
 sleep 60s
+
+# Get ingress URL
+echo "--------------------Application LoadBalancer URL--------------------"
+kubectl get svc -n ${namespace} ${app_service_name} -o=custom-columns=EXTERNAL-IP:.status.loadBalancer.ingress[*].hostname | tail -n +2
+echo "-------------------- Alertmanager LoadBalancer URL--------------------"
+kubectl get svc -n ${monitoring_ns} ${alertmanager_service_name} -o=custom-columns=EXTERNAL-IP:.status.loadBalancer.ingress[*].hostname | tail -n +2
+echo "--------------------Prometheus LoadBalancer URL--------------------"
+kubectl get svc -n ${monitoring_ns} ${prometheus_service_name} -o=custom-columns=EXTERNAL-IP:.status.loadBalancer.ingress[*].hostname | tail -n +2
+echo "--------------------Grafana LoadBalancer URL--------------------"
+kubectl get svc -n ${monitoring_ns} ${grafana_service_name} -o=custom-columns=EXTERNAL-IP:.status.loadBalancer.ingress[*].hostname | tail -n +2
+
+# Get RDS endpoint URL
+echo "--------------------RDS endpoint URL--------------------"
+echo $rds_endpoint
