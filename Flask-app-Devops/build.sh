@@ -62,3 +62,22 @@ aws ecr get-login-password --region $region | docker login --username AWS --pass
 echo "--------------------Pushing Docker Image--------------------"
 docker push $app_image_name
 docker push $db_image_name
+
+
+# create namespace
+echo "--------------------creating Namespace--------------------"
+kubectl create ns $namespace || true
+
+# add rds endpoint into k8s secrets
+echo "--------------------Create RDS Secrets --------------------"
+kubectl create secret -n $namespace generic rds-endpoint --from-literal=endpoint=$rds_endpoint || true
+kubectl create secret -n $namespace generic rds-username --from-literal=username=$db_username || true
+kubectl create secret -n $namespace generic rds-password --from-literal=password=$db_password || true
+
+# deploy the application
+echo "--------------------Deploy App--------------------"
+kubectl apply -n $namespace -f k8s/
+
+# Wait for application to be deployed
+echo "--------------------Wait for all pods to be running--------------------"
+sleep 60s
