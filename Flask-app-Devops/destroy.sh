@@ -26,3 +26,25 @@ docker rmi -f $db_image_name || true
 echo "--------------------Deleting ECR-IMG--------------------"
 ./ecr-imgs-delete.sh $app_img $region 
 ./ecr-imgs-delete.sh $db_img $region 
+
+
+
+# Release Elastic IP
+echo "--------------------Releasing Elastic IP--------------------"
+allocation_id=$(aws ec2 describe-addresses --region $region --filters "Name=tag:Name,Values=${cluster_name}-nat-eip" --query 'Addresses[].AllocationId' --output text)
+if [ ! -z "$allocation_id" ]; then
+    aws ec2 release-address --allocation-id $allocation_id --region $region
+fi
+
+# Destroy Infrastructure
+# echo "--------------------Destroy Infrastructure--------------------"
+cd terraform && \ 
+terraform destroy -auto-approve
+
+# Delete rds snapshot
+echo "--------------------Delete Rds Snapshot--------------------"
+aws rds delete-db-cluster-snapshot --db-cluster-snapshot-identifier $rds_snapshot_name --region $region
+
+# Destroy the remaning infrastructure
+echo "--------------------Destroy Remaining Infrastructure--------------------"
+terraform destroy -auto-approve
