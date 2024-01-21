@@ -14,3 +14,15 @@ rds_snapshot_name=$(terraform output -raw final_snapshot_name)
 cd ..
 namespace="todo-app"
 # End Variables
+
+
+
+# remove preious docker images
+echo "--------------------Remove Previous build--------------------"
+docker rmi -f $app_image_name || true
+docker rmi -f $db_image_name || true
+
+# delete Docker-img from ECR
+echo "--------------------Deleting ECR-IMG--------------------"
+./ecr-imgs-delete.sh $app_img $region 
+./ecr-imgs-delete.sh $db_img $region 
