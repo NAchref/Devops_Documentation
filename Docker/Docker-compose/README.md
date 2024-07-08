@@ -11,3 +11,8 @@ This is especially useful for environments where multiple services (databases, w
 
 - **Services**: Containers defined in the `docker-compose.yml` file, each corresponding to an individual component of your application.
 
+- **Networks**: Allows services to communicate with each other.
+
+- **Volumes**: Used to persist data between container runs.
+
+---
