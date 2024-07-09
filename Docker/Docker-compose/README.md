@@ -16,3 +16,18 @@ This is especially useful for environments where multiple services (databases, w
 - **Volumes**: Used to persist data between container runs.
 
 ---
+
+## Example `docker-compose.yml` File
+
+
+```yaml
+version: '3.8'
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/usr/share/nginx/html
+    networks:
+      - frontend
