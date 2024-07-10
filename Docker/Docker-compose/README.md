@@ -31,3 +31,29 @@ services:
       - ./app:/usr/share/nginx/html
     networks:
       - frontend
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - backend
+      
+networks:
+  frontend:
+  backend:
+  
+volumes:
+  db_data:
+  
+```  
+
+This example defines a simple app with two services: a web server using Nginx and a PostgreSQL database.
+
+## Basic Commands
+
+- **Starting Services**: 
+
+This command starts all services defined in the `docker-compose.yml` file.
