@@ -57,3 +57,15 @@ This example defines a simple app with two services: a web server using Nginx an
 - **Starting Services**: 
 
 This command starts all services defined in the `docker-compose.yml` file.
+
+```bash
+docker-compose up
+```
+
+- **Running in Detached Mode**:
+
+Starts the containers in the background (detached mode)
+
+```bash
+docker-compose up -d
+```
