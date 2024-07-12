@@ -69,3 +69,11 @@ Starts the containers in the background (detached mode)
 ```bash
 docker-compose up -d
 ```
+
+- **Stopping Services**:
+
+Stops all running containers.
+
+```bash
+docker-compose down
+```
