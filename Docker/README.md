@@ -87,3 +87,9 @@ docker rm <container_id>
 docker rmi <image_id>
 ```
 
+## Disk space is being used by images
+```bash
+docker system df
+```
+
+
