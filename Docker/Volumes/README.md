@@ -5,8 +5,17 @@ Docker volumes are used to manage data in Docker containers by enabling persiste
 
 ## Key Commands
 
-- **Create a volume**:  
+- **Create a volume** :  
   ```bash
   docker volume create <volume_name>
   ```
-  
+
+  **list volumes** :
+  ```bash
+  docker volume ls
+  ``` 
+
+**Inspect Volumes** :
+  ```bash
+  docker volume inspect <volume_name>
+  ``` 
