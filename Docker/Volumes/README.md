@@ -18,4 +18,15 @@ Docker volumes are used to manage data in Docker containers by enabling persiste
 **Inspect Volumes** :
   ```bash
   docker volume inspect <volume_name>
-  ``` 
+  ```
+
+**Remove a volume** :
+  ```bash
+  docker volume rm <volume_name>
+  ```
+
+**Mount a volume to a container** :
+  ```bash
+docker run -v <volume_name>:/path/in/container <image>
+ ```
+      
