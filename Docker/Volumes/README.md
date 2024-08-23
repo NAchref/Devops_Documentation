@@ -29,4 +29,8 @@ Docker volumes are used to manage data in Docker containers by enabling persiste
   ```bash
 docker run -v <volume_name>:/path/in/container <image>
  ```
-      
+
+**Mount a host directory as a volume (when you want data on your local filesystem to be accessible in a container)** :
+```bash
+docker run -v /path/on/host:/path/in/container <image>
+ ```
