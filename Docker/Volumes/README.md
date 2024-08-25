@@ -15,22 +15,39 @@ docker volume create <volume_name>
 docker volume ls
 ``` 
 
-**Inspect Volumes** :
-  ```bash
-  docker volume inspect <volume_name>
-  ```
+- **Inspect Volumes** :
+```bash
+docker volume inspect <volume_name>
+```
 
-**Remove a volume** :
-  ```bash
-  docker volume rm <volume_name>
-  ```
+- **Remove a volume** :
+```bash
+docker volume rm <volume_name>
+```
 
-**Mount a volume to a container** :
-  ```bash
+- **Mount a volume to a container** :
+```bash
 docker run -v <volume_name>:/path/in/container <image>
- ```
+```
 
-**Mount a host directory as a volume (when you want data on your local filesystem to be accessible in a container)** :
+- **Mount a host directory as a volume (when you want data on your local filesystem to be accessible in a container)** :
 ```bash
 docker run -v /path/on/host:/path/in/container <image>
- ```
+```
+
+- **Remove all unused volumes (volumes not used by any containers)** :
+```bash
+docker volume prune
+```
+
+- **Use anonymous volumes (when you need a temporary volume without explicitly creating it)** :
+```bash
+docker run -v /path/in/container <image>
+```
+
+- **Backup a Docker volume (useful for making a snapshot of your data)** :
+```bash
+docker run --rm -v <volume_name>:/data -v /path/on/host:/backup busybox tar czf /backup/backup.tar.gz /data
+```
+
+
