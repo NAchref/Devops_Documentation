@@ -50,4 +50,21 @@ docker run -v /path/in/container <image>
 docker run --rm -v <volume_name>:/data -v /path/on/host:/backup busybox tar czf /backup/backup.tar.gz /data
 ```
 
+- **Restore a Docker volume from a backup** :
+```bash
+docker run --rm -v <volume_name>:/data -v /path/on/host:/backup busybox tar xzf /backup/backup.tar.gz -C /data
+```
+
+- **Restore a Docker volume from a backup** :
+```bash
+docker run --rm -v <volume_name>:/data -v /path/on/host:/backup busybox tar xzf /backup/backup.tar.gz -C /data
+```
+
+- **Copy data from a volume to the host (useful for manually inspecting or editing volume data)** :
+```bash
+docker run --rm -v <volume_name>:/data -v /path/on/host:/backup busybox cp -r /data /backup
+```
+
+
+
 
