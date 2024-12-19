@@ -2,8 +2,6 @@
 
 ## Table of Contents
 
-## Table of Contents
-
 - [Overview](#overview)
 - [Prerequisites](#prerequisites)
 - [Step 1: Set Up Azure Account](#step-1-set-up-azure-account)
@@ -16,4 +14,19 @@
 ---
 
 
-<img src="../Images/R.jpg" alt="Azure Logo" width="100%" />
+<img src="../Images/R.jpg" alt="Azure Logo" width="100%" heigth="100px" />
+
+
+## Overview
+
+This guide provides detailed steps to deploy a static website on **Azure** using **Azure Blob Storage** for storage and **Azure Virtual Machine** for hosting.
+
+---
+
+## Prerequisites
+
+- An **Azure account**
+- A registered domain name (optional, but recommended for custom domain setup)
+- **Azure CLI** installed and configured on your local machine
+
+---
