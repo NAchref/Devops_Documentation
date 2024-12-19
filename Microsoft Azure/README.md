@@ -14,7 +14,7 @@
 ---
 
 
-<img src="../Images/R.jpg" alt="Azure Logo" width="100%" heigth="70px" />
+<img src="../Images/R.jpg" alt="Azure Logo" width="100%" height="100px" />
 
 
 ## Overview
