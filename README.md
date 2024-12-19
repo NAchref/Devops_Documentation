@@ -8,5 +8,6 @@ This repository aims to serve as a comprehensive guide to DevOps for developers 
 * [Git](Git/) Basics
 * [Docker](Docker/) Commands and Setup
 * Steps to Deploy Website on [AWS](AWS/)
+* Microsoft Azure Cloud
 
 

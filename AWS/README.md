@@ -1,4 +1,4 @@
-# Steps to Deploy Website on AWS
+# Steps to Deploy App on AWS
 
 
 ## Table of Contents
